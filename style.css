@@ -1,0 +1,92 @@
+* {
+    font-family: Work Sans;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --White : hsl(0, 0%, 100%) ;
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+.parent {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.first-back {
+    width: 100%;
+    height: 200px;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+}
+.second-back {
+    width: 100%;
+    height: calc(100vh - 200px);
+    background-color: var(--Light-pink);
+}
+.cont {
+    position: absolute;
+    width: 90% ;
+    height: 65%;
+    background-color: var(--White);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 0 18px 9px #0000002b;
+    padding: 20px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.title img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.quest-img {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.quest-img h3 {
+    font-size: 16px;
+    width: 70%;
+}
+.quest-img img {
+    cursor: pointer;
+}
+.question-data p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--Grayish-purple);
+    display: block;
+}
+
+@keyframes moving {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media (min-width:1000px) {
+    .parent {
+        width: 70%;
+        margin: auto;
+    }
+}
